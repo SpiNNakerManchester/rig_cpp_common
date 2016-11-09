@@ -1,5 +1,11 @@
+# Import modules
+import struct
+
 # Import classes
-from collections import namedtuple
+from collections import Iterable, namedtuple
+
+# Import functions
+from six import iteritems, iterkeys
 
 # ----------------------------------------------------------------------------
 # Args
@@ -11,7 +17,7 @@ class Args(namedtuple("Args", "args, kwargs")):
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
-def load_regions(regions, region_arguments, machine_controller, core):
+def load_regions(regions, region_arguments, machine_controller, core, logger):
     # Calculate region size
     size, allocs = sizeof_regions_named(regions, region_arguments)
 
