@@ -1,8 +1,5 @@
 #pragma once
 
-// Common includes
-#include "rig_cpp_common/fixed_point_number.h"
-
 // Forward declarations
 namespace Common
 {
@@ -13,7 +10,6 @@ namespace Common
 }
 
 // Namespaces
-using namespace Common::FixedPointNumber;
 using namespace Common::Random;
 
 //-----------------------------------------------------------------------------
@@ -23,6 +19,7 @@ namespace Common
 {
 namespace Maths
 {
-  uint32_t Hypergeom(uint32_t ngood, uint32_t nbad, uint32_t nsample, MarsKiss64 &rng);
+  unsigned int Hypergeom(unsigned int ngood, unsigned int nbad, unsigned int nsample,
+                         MarsKiss64 &rng);
 } // Maths
 } // Common

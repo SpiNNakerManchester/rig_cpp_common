@@ -1,7 +1,7 @@
 #pragma once
 
 // Common includes
-#include "rig_cpp_common/fixed_point_number.h"
+#include "../fixed_point_number.h"
 
 // Namespaces
 using namespace Common::FixedPointNumber;
@@ -13,6 +13,6 @@ namespace Common
 {
 namespace Maths
 {
-  S1615 LogFact(uint32_t n);
+  S1615 LogFact(unsigned int n);
 } // Maths
 } // Common
